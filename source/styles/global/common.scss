@@ -5,20 +5,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: $primary-font;
-  color: $dark-grey;
-  font-size: 14px;
-  line-height: 18px;
-  // margin: 0;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 a {
   text-decoration: none;
 }
@@ -27,8 +13,4 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-}
-
-.visually-hidden {
-  display: none;
 }

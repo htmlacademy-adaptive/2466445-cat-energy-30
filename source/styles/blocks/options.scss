@@ -1,1 +1,3 @@
-// пока нет стилей
+.options__list {
+  @include list;
+}

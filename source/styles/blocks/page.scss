@@ -1,1 +1,7 @@
-// нет стилей
+.page__body {
+  margin: 0;
+  font-family: $primary-font;
+  color: $main-text;
+  font-size: 14px;
+  line-height: 18px;
+}

@@ -1,1 +1,3 @@
-// пока нет стилей
+.main-catalog__list {
+  @include list;
+}

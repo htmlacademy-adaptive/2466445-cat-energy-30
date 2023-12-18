@@ -1,5 +1,5 @@
 .result__value {
-  color: #000000;
+  color: $black;
   text-align: center;
   font-family: $titles-font;
   font-size: 24px;
@@ -7,7 +7,7 @@
 }
 
 .result__description {
-  // color: $dark-grey;
+  // color: $main-text;
   text-align: center;
   // font-family: $primary-font;
   font-size: 12px;

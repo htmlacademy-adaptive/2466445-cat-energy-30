@@ -1,1 +1,8 @@
-// пока нет стилей
+.cost {
+  color: $black;
+  text-align: center;
+  font-family: $titles-font;
+  // font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
