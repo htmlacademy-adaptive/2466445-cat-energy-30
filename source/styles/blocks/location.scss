@@ -8,3 +8,24 @@
 .location__address {
   line-height: 20px;
 }
+
+.location__map {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 57px;
+    height: 53px;
+    flex-shrink: 0;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image:
+      image-set(
+        url("../../images/map-pin-mobile@1x.png") 1x,
+        url("../../images/map-pin-mobile@2x.png") 2x);
+    background-size: contain;
+  }
+}

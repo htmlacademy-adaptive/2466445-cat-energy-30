@@ -1,3 +1,12 @@
 .footer {
   background-color: $main-bg;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.footer__copyright {
+  display: flex;
 }

@@ -6,6 +6,52 @@
   text-transform: uppercase;
 }
 
+.section__input-wrapper--mail {
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    z-index: 1;
+    position: absolute;
+    left: 20px;
+    mask-image: url("../../images/icons/stack.svg#email");
+    background-color: $second-text;
+
+    &:focus {
+      background-color: $main-color;
+    }
+
+    &:invalid {
+      background-color: #ff8282;
+    }
+  }
+}
+
+.section__input-wrapper--tel {
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    z-index: 1;
+    position: absolute;
+    left: 20px;
+    mask-image: url("../../images/icons/stack.svg#phone");
+    background-color: $second-text;
+
+    &:focus {
+      background-color: $main-color;
+    }
+
+    &:invalid {
+      background-color: #ff8282;
+    }
+  }
+}
+
 .section__input {
   color: $main-text;
   font-family: $titles-font;

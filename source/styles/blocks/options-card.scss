@@ -1,5 +1,43 @@
 .options-card {
   background-color: $main-bg;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet) {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+}
+
+.options-card--slim {
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 53px;
+    flex-shrink: 0;
+    z-index: 1;
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    background-image: url("../../images/icons/stack.svg#cat-sits");
+  }
+}
+
+.options-card--fat {
+  &::after {
+    content: "";
+    display: block;
+    width: 67px;
+    height: 50px;
+    flex-shrink: 0;
+    z-index: 1;
+    position: absolute;
+    top: 24px;
+    left: 13px;
+    background-image: url("../../images/icons/stack.svg#cat-walks");
+  }
 }
 
 .options-card__title {
@@ -8,13 +46,20 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-}
+  margin-left: 70px;
+  margin-top: 30px;
+  margin-bottom: 29px;
 
-.options-card__content {
-  // color: $main-text ;
-  // font-family: $primary-font;
-  // font-size: 14px;
-  // line-height: 18px;
+  @media (min-width: $tablet) {
+    margin-left: 0;
+    margin-top: 77px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 162px;
+    margin-bottom: 73px;
+  }
 }
 
 .options-card__link {
@@ -23,4 +68,28 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 10px;
+    flex-shrink: 0;
+    background-image: url("../../images/icons/stack.svg#arrow-right");
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      width: 32px;
+    }
+  }
+}
+
+.options-card__link:hover::after {
+  width: 32px;
 }

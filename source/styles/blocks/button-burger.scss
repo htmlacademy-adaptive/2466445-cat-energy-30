@@ -1,1 +1,8 @@
-// пока нет стилей
+.button-burger {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background-image: url("../../images/icons/stack.svg#burger-button");
+  border: none;
+}

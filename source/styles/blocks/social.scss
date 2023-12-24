@@ -1,3 +1,43 @@
 .social {
   @include list;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.social__link {
+  background-color: #666666;
+
+  &:hover {
+    background-color: $main-color;
+  }
+
+  &:active {
+    background-color: $main-color;
+    opacity: 0.3;
+  }
+}
+
+.social__link--vk {
+  display: block;
+  width: 28px;
+  height: 22px;
+  flex-shrink: 0;
+  mask-image: url("../../images/icons/stack.svg#vkontakte");
+}
+
+.social__link--youtube {
+  display: block;
+  width: 28px;
+  height: 22px;
+  flex-shrink: 0;
+  mask-image: url("../../images/icons/stack.svg#youtube");
+}
+
+.social__link--telegram {
+  display: block;
+  width: 28px;
+  height: 22px;
+  flex-shrink: 0;
+  mask-image: url("../../images/icons/stack.svg#telegram");
 }

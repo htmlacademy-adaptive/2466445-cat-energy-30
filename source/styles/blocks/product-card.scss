@@ -6,6 +6,16 @@
   text-transform: uppercase;
 }
 
+.product-card__title--more {
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../images/icons/stack.svg#plus");
+  }
+}
+
 .product-card__description {
   text-align: center;
   font-size: 12px;

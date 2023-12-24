@@ -1,1 +1,22 @@
-// пока нет стилей
+.slider__button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  // flex-shrink: 0;
+  // z-index: 1;
+  // position: absolute;
+  // left: -18px;
+  // top: 108px;
+  mask-image: url("../../images/icons/stack.svg#thumb");
+  border: none;
+  background-color: #666666;
+
+  &:hover {
+    background-color: $main-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+    background-color: $main-color-active;
+  }
+}
