@@ -1,1 +1,36 @@
-// пока нет стилей
+.copyright__logo {
+  color: $main-text;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    flex-shrink: 0;
+    mask-image: url("../../images/icons/stack.svg#html-academy");
+    background-color: $main-text;
+
+    &:hover {
+      background-color: $main-color;
+    }
+
+    &:active {
+      background-color: $main-color;
+    }
+  }
+}

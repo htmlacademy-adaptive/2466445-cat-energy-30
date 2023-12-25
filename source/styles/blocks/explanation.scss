@@ -1,1 +1,11 @@
-// пока нет стилей
+.explanation {
+  padding-bottom: 49px;
+}
+
+.explanation__title {
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 32px;
+  }
+}

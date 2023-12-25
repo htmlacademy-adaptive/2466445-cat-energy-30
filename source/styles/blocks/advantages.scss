@@ -1,6 +1,56 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .advantages__item {
-  // color: $main-text;
-  // font-family: $primary-font;
-  // font-size: 14px;
-  // line-height: 18px;
+  display: flex;
+  gap: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    position: relative;
+  }
+}
+
+
+.advantages__item--leaf {
+  &::before {
+    background-image: url("../../images/icons/stack.svg#leaf");
+  }
+}
+
+.advantages__item--powder {
+  &::before {
+    background-image: url("../../images/icons/stack.svg#powder");
+  }
+}
+
+.advantages__item--cutlery {
+  &::before {
+    background-image: url("../../images/icons/stack.svg#cutlery");
+  }
+}
+
+.advantages__item--balance {
+  &::before {
+    background-image: url("../../images/icons/stack.svg#balance");
+  }
 }

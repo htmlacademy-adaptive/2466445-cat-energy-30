@@ -1,1 +1,16 @@
-// пока нет стилей
+.logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__text {
+  @media (min-width: 1440px) {
+    width: 118px;
+    height: 21px;
+  }
+}
