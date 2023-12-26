@@ -33,4 +33,8 @@
       background-color: $main-color;
     }
   }
+
+  @media (min-width: $tablet) {
+    gap: 23px;
+  }
 }

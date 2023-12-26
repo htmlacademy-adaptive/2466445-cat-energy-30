@@ -1,4 +1,60 @@
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 33vw 33vw 33vw;
+  grid-template-rows: 65px 200px;
+  gap: 0;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    padding-top: 25px;
+  }
+}
+
+.header__logo--icon {
+  grid-column: 1 / 2;
+  grid-row: 1 / 1;
+  margin-left: 20px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    margin-left: 30px;
+  }
+}
+
+.header__logo--text {
+  grid-column: 2 / 3;
+  grid-row: 1 / 1;
+  margin: auto;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    margin-left: 13px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 14px;
+  }
+}
+
+.header__toggle {
+  display: block;
+  grid-column: 3 / 3;
+  grid-row: 1 / 1;
+  margin-right: 20px;
+  justify-self: right;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.header__nav {
+  grid-column: 1 / 4;
+  grid-row: 2 / 2;
+
+  @media (min-width: $tablet) {
+    align-self: end;
+    margin-right: 30px;
+  }
 }
