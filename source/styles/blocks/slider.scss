@@ -1,15 +1,53 @@
+.slider {
+  position: relative;
+}
+
+.slider__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 256px;
+}
+
+.slider__image-wrapper {
+  overflow: hidden;
+}
+
+.slider__image {
+  height: 100%;
+  max-width: none;
+  display: block;
+}
+
+.slider__image--fat {
+  object-position: 100px;
+}
+
+.slider__image--slim {
+  object-position: -100px;
+}
+
 .slider__button {
   display: block;
   width: 40px;
   height: 40px;
-  // flex-shrink: 0;
-  // z-index: 1;
-  // position: absolute;
-  // left: -18px;
-  // top: 108px;
-  mask-image: url("../../images/icons/stack.svg#thumb");
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../../images/icons/stack.svg#thumb");
   border: none;
-  background-color: #666666;
+  // background-color: #666666;
+
+  &::after {
+    content: "";
+    display: flex;
+    align-self: center;
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    background: #666666;
+  }
 
   &:hover {
     background-color: $main-color;

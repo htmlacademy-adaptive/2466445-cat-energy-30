@@ -3,4 +3,9 @@
   font-family: $titles-font;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

@@ -4,4 +4,18 @@
   font-family: $titles-font;
   line-height: 20px;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    align-items: end;
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    gap: 63px;
+  }
 }

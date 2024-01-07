@@ -1,8 +1,14 @@
 .button-burger {
-  display: block;
+  // display: block;
   width: 24px;
   height: 24px;
-  flex-shrink: 0;
   background-image: url("../../images/icons/stack.svg#burger-button");
   border: none;
+  background-color: transparent;
+}
+
+.button-burger--closed {
+  background-image: url("../../images/icons/stack.svg#burger-button-closed");
+  width: 18px;
+  height: 18px;
 }

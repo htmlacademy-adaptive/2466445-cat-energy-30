@@ -1,14 +1,12 @@
+.options {
+  @include padding-sides;
+}
+
 .options__list {
   @include list;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  @media (min-width: $tablet) {
-    gap: 30px;
-  }
 
   @media (min-width: $desktop) {
+    display: flex;
     flex-direction: row;
     gap: 80px;
   }

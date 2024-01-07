@@ -1,3 +1,11 @@
+.copyright {
+  padding-top: 20px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
+}
+
 .copyright__logo {
   color: $main-text;
   font-family: $primary-font;
@@ -32,5 +40,9 @@
     &:active {
       background-color: $main-color;
     }
+  }
+
+  @media (min-width: $tablet) {
+    gap: 23px;
   }
 }
