@@ -94,6 +94,7 @@
   text-transform: uppercase;
   margin-left: 70px;
   margin-bottom: 29px;
+  white-space: nowrap;
 
   @media (min-width: $tablet) {
     margin-left: 0;

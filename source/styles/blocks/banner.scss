@@ -19,6 +19,14 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 82px;
+    background-image:
+      linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, $white 50%),
+      image-set(
+        ("../../images/index-background-cat-desktop@1x.png") 1x,
+        ("../../images/index-background-cat-desktop@2x.png") 2x);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: auto 694px;
   }
 }
 
@@ -55,6 +63,10 @@
 .banner__image {
   display: block;
   margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    margin-top: 29px;
+  }
 }
 
 .banner__button {
@@ -64,7 +76,8 @@
     position: absolute;
     left: 120px;
     top: 295px;
-    width: 192px;
+    width: auto;
+    padding: 14px 26px;
     margin: 0;
     font-size: 20px;
     line-height: 26px;

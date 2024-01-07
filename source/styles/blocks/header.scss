@@ -1,13 +1,24 @@
 .header {
   display: grid;
-  grid-template-columns: 33vw 33vw 33vw;
-  grid-template-rows: 65px 200px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 65px auto;
   gap: 0;
   align-items: center;
 
   @media (min-width: $tablet) {
     display: flex;
     padding-top: 25px;
+    border: none;
+  }
+}
+
+.header__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -30,6 +41,7 @@
   @media (min-width: $tablet) {
     display: flex;
     margin-left: 13px;
+    margin-right: 14px;
   }
 
   @media (min-width: $desktop) {
@@ -49,12 +61,38 @@
   }
 }
 
+.header__toggle--nojs {
+  background-image: url("../../images/icons/stack.svg#burger-button-closed");
+  width: 18px;
+  height: 18px;
+}
+
 .header__nav {
-  grid-column: 1 / 4;
-  grid-row: 2 / 2;
+  display: none;
+
+  &--nojs {
+    display: block;
+    grid-column: 1 / 4;
+    grid-row: 2 / 2;
+  }
+
+  &--opened {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 65px;
+  }
 
   @media (min-width: $tablet) {
+    display: flex;
     align-self: end;
     margin-right: 30px;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 110px;
   }
 }
