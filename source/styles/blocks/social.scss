@@ -18,6 +18,10 @@
     background-color: $main-color;
   }
 
+  &:focus {
+    background-color: $main-color;
+  }
+
   &:active {
     background-color: $main-color;
     opacity: 0.3;

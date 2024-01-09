@@ -1,5 +1,8 @@
 .extra-catalog {
   @include padding-sides;
+  @media (min-width: $desktop) {
+    margin-bottom: 87px;
+  }
 }
 
 .extra-catalog__content {

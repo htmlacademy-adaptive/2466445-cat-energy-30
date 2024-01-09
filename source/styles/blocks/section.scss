@@ -114,6 +114,10 @@
   align-items: center;
   white-space: nowrap;
 
+  &--disabled {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: normal;
@@ -129,6 +133,22 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+    &:hover {
+      outline: 1px solid #cdcdcd;
+    }
+
+    &:focus {
+      outline: 2px solid $main-text;
+    }
+
+    &--error {
+      outline: 2px solid #ff8282;
+    }
+
+    &--disabled {
+      opacity: 0.3;
+    }
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -196,15 +216,21 @@
     mask-image: url("../../images/icons/stack.svg#email");
     background-color: $second-text;
 
-    &:focus {
-      background-color: $main-color;
-    }
-
-    &:invalid {
+    &--error {
       background-color: #ff8282;
     }
   }
 }
+
+//не работает
+.section__input-wrapper--mail .section__input {
+  &:focus {
+    .section__input-wrapper--mail::after {
+      background-color: $main-color;
+    }
+  }
+}
+
 
 .section__input-wrapper--tel {
   &::after {
@@ -226,7 +252,7 @@
       background-color: $main-color;
     }
 
-    &:invalid {
+    &--error {
       background-color: #ff8282;
     }
   }
@@ -248,10 +274,17 @@
 .section__title--additional-info {
   margin-top: 26px;
   margin-bottom: 35px;
+  width: fit-content;
 
   @media (min-width: $tablet) {
     margin-top: 65px;
     margin-bottom: 76px;
+  }
+}
+
+.section__title--additional-info br {
+  @media (min-width: $tablet) {
+    display: inline;
   }
 }
 

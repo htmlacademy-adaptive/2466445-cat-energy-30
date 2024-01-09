@@ -5,6 +5,11 @@
   @media (min-width: $tablet) {
     padding: 0 70px 60px;
   }
+
+  @media (min-width: $desktop) {
+    @include padding-sides;
+    padding-bottom: 79px;
+  }
 }
 
 .form__section {

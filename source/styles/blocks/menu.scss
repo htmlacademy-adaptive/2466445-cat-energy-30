@@ -33,6 +33,10 @@
     opacity: 0.6;
   }
 
+  &:active {
+    opacity: 0.3;
+  }
+
   &--active {
     position: relative;
 
@@ -44,6 +48,21 @@
       left: 0;
       height: 2px;
       background: $main-color;
+    }
+  }
+}
+
+.menu__link--index {
+  @media (min-width: $desktop) {
+    color: $white;
+  }
+}
+
+.menu__link--index.menu__link--active {
+  @media (min-width: $desktop) {
+
+    &::after {
+      background: $white;
     }
   }
 }

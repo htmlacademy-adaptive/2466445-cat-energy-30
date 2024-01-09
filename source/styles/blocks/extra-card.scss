@@ -24,6 +24,13 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    align-content: center;
+  }
 }
 
 .extra-card__title {
@@ -39,6 +46,10 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
 }
 
 .extra-card__description {
@@ -51,6 +62,16 @@
 
   @media (min-width: $tablet) {
     line-height: 20px;
+    display: grid;
+    grid-template-columns: auto 94px;
+    justify-items: end;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 3fr 1fr;
+    justify-items: start;
+    margin: 0;
+    align-content: center;
   }
 }
 

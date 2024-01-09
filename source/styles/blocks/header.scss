@@ -9,16 +9,7 @@
     display: flex;
     padding-top: 25px;
     border: none;
-  }
-}
-
-.header__logo {
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
+    @include padding-sides;
   }
 }
 
@@ -29,7 +20,7 @@
 
   @media (min-width: $tablet) {
     display: flex;
-    margin-left: 30px;
+    margin-left: 0;
   }
 }
 
@@ -62,9 +53,10 @@
 }
 
 .header__toggle--nojs {
-  background-image: url("../../images/icons/stack.svg#burger-button-closed");
-  width: 18px;
-  height: 18px;
+  display: none;
+  // background-image: url("../../images/icons/stack.svg#burger-button-closed");
+  // width: 18px;
+  // height: 18px;
 }
 
 .header__nav {
@@ -87,12 +79,7 @@
   @media (min-width: $tablet) {
     display: flex;
     align-self: end;
-    margin-right: 30px;
     justify-content: flex-end;
     width: 100%;
-  }
-
-  @media (min-width: $desktop) {
-    margin-right: 110px;
   }
 }

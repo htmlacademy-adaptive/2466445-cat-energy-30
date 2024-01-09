@@ -15,7 +15,7 @@
     background-color: $main-color-active;
   }
 
-  &--active {
-    opacity: 0.3;
+  &:active {
+    color: rgba($white, 0.3);
   }
 }

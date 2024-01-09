@@ -1,5 +1,5 @@
 .example {
-  background: $main-bg;
+  background-color: #eaeaea;
 
   @media (min-width: $tablet) {
     background: linear-gradient(to top, $main-bg 462px, $white 462px);
@@ -8,6 +8,7 @@
 
   @media (min-width: $desktop) {
     border: none;
+    background-color: $main-bg;
   }
 }
 
@@ -22,32 +23,38 @@
   @media (min-width: $tablet) {
     padding-top: 45px;
     padding-bottom: 101px;
-    gap: 55px;
+    gap: 104px;
   }
 
   @media (min-width: $desktop) {
     padding-top: 0;
     padding-bottom: 75px;
-    max-width: 50%;
-    max-height: 600px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
   }
 }
 
 .example__title {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 5px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 91px;
+    margin-bottom: 146px;
   }
 }
 
 .example__description {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 55px;
+  }
+
   @media (min-width: $desktop) {
-    margin-bottom: 14px;
+    margin-bottom: 69px;
   }
 }

@@ -7,7 +7,7 @@
 
   @media (min-width: $desktop) {
     flex-direction: column;
-    gap: 55px;
+    gap: 60px;
     align-items: flex-start;
   }
 }
@@ -16,13 +16,27 @@
   @include list;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet) {
     gap: 43px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
   }
 }
 
 .stats__item {
   border: 1px solid #cdcdcd;
   border-radius: 3px;
+  padding-top: 15px;
+  width: 124px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    width: 172px;
+  }
 }
