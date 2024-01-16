@@ -133,6 +133,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  background-color: $white;
 
     &:hover {
       outline: 1px solid #cdcdcd;
@@ -175,7 +176,31 @@
   width: 30px;
   height: 30px;
   margin: 0;
-  // accent-color: $green;
+  appearance: none;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+
+  &:checked {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $main-color;
+
+      @media (min-width: $tablet) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 
   @media (min-width: $tablet) {
     width: 40px;
@@ -188,10 +213,31 @@
   order: -1;
   width: 30px;
   height: 30px;
-  border: #cdcdcd;
+  appearance: none;
+  border: 1px solid #cdcdcd;
   border-radius: 0;
   margin: 0;
-  // accent-color: $green;
+
+  &:checked {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background-image: url("../../images/icons/stack.svg#tick");
+
+      @media (min-width: $tablet) {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
 
   @media (min-width: $tablet) {
     width: 40px;
@@ -284,7 +330,7 @@
 
 .section__title--additional-info br {
   @media (min-width: $tablet) {
-    display: inline;
+    display: none;
   }
 }
 
@@ -309,6 +355,10 @@
 }
 
 .section__wrapper-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 55% 45%;

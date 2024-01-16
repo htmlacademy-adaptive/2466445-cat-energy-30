@@ -34,50 +34,119 @@
   display: block;
 }
 
-.slider__button {
-  display: block;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #666666;
-  border-radius: 50%;
-  background-color: $white;
-  z-index: 1;
+// .slider__button {
+//   display: block;
+//   width: 40px;
+//   height: 40px;
+//   border: 2px solid #666666;
+//   border-radius: 50%;
+//   background-color: $white;
+//   z-index: 1;
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+
+//   &::before {
+//     content: "";
+//     display: block;
+//     width: 24px;
+//     height: 18px;
+//     mask-image: url("../../images/icons/stack.svg#thumb");
+//     background-color: #666666;
+//     transform: translateY(9px);
+
+//   }
+
+//   &::after {
+//     content: "";
+//     display: block;
+//     margin: auto;
+//     width: 4px;
+//     height: 256px;
+//     transform: translateY(-50%);
+//     border-radius: 2px;
+//     background: #666666;
+
+//     @media (min-width: $tablet) {
+//       height: 512px;
+//     }
+//   }
+
+//   &:hover {
+//     border-color: $main-color;
+
+//     &::before {
+//       background-color: $main-color;
+//     }
+
+//     &::after {
+//       background-color: $main-color;
+//     }
+//   }
+
+//   &:active {
+//     opacity: 0.6;
+//     border-color: $main-color-active;
+
+//     &::before {
+//       background-color: $main-color-active;
+//     }
+
+//     &::after {
+//       background-color: $main-color-active;
+//     }
+//   }
+// }
+
+.slider__toggle {
   position: absolute;
+  top: 0;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+}
+
+.slider__button {
+  width: 4px;
+  height: 256px;
+  border-radius: 2px;
+  background: #666666;
+
+  @media (min-width: $tablet) {
+    height: 512px;
+  }
 
   &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #666666;
+    border-radius: 50%;
+    background-color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
     content: "";
     display: block;
     width: 24px;
     height: 18px;
     mask-image: url("../../images/icons/stack.svg#thumb");
     background-color: #666666;
-    transform: translateY(9px);
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  &::after {
-    content: "";
-    display: block;
-    margin: auto;
-    width: 4px;
-    height: 256px;
-    transform: translateY(-50%);
-    border-radius: 2px;
-    background: #666666;
-
-    @media (min-width: $tablet) {
-      height: 512px;
-    }
-  }
-
-  &:hover {
-    border-color: $main-color;
+    &:hover {
+      background: $main-color;
 
     &::before {
-      background-color: $main-color;
+      border-color: $main-color;
     }
 
     &::after {
@@ -87,13 +156,16 @@
 
   &:active {
     opacity: 0.6;
-    border-color: $main-color-active;
+    background: $main-color-active;
+
 
     &::before {
-      background-color: $main-color-active;
+      opacity: 0.6;
+      border-color: $main-color-active;
     }
 
     &::after {
+      opacity: 0.6;
       background-color: $main-color-active;
     }
   }

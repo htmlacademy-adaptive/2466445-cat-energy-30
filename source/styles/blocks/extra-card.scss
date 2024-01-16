@@ -33,6 +33,11 @@
   }
 }
 
+.extra-card__link {
+    &:hover {
+      opacity: 0.8;
+    }
+}
 .extra-card__title {
   color: $second-text;
   font-family: $titles-font;

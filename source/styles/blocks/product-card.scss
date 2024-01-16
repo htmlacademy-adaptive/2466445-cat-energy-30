@@ -26,6 +26,12 @@
   }
 }
 
+.product-card__link {
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 .product-card__wrapper {
   @include padding-sides;
   display: grid;

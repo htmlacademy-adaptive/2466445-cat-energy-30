@@ -85,7 +85,7 @@
       </div>
 
       <fieldset class="form__section section section--additional-info">
-        <legend class="section__title section__title--additional-info">Контактные данные<br>(владельца кота)</legend>
+        <legend class="section__title section__title--additional-info">Контактные данные <br>(владельца кота)</legend>
         <div class="section__wrapper-add-info">
           <label class="section__item">
             E-mail:*
@@ -144,19 +144,24 @@
         </div>
       </div>
       <div class="location__map">
-        <!-- <picture>
-          <source width="1440" height="400" type="image/png" media="(min-width: 1200px)"
-            srcset="images/map-background-desktop@1x.png 1x, images/map-background-desktop@2x.png 2x">
-          <source width="768" height="400" type="image/png" media="(min-width: 768px)"
-            srcset="images/map-background-tablet@1x.png 1x, images/map-background-tablet@2x.png 2x">
-          <img class="location__image" src="images/map-background-mobile@1x.png" srcset="images/map-background-mobile@2x.png 2x" width="320"
-            height="362" alt="Карта">
-        </picture> -->
+
         <div style="position:relative;overflow:hidden;">
           <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
           <a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSUYAQFtjfXVyeXpgZQ==/?ll=30.324335%2C59.938452&utm_medium=mapframe&utm_source=maps&z=16.94" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс Карты</a>
-          <iframe src="https://yandex.ru/map-widget/v1/?ll=30.324335%2C59.938452&mode=whatshere&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16.94" width="100%" height="362" frameborder="none" allowfullscreen="true" style="position:relative;">
-        </iframe></div>
+          <iframe class="location__real-map" src="https://yandex.ru/map-widget/v1/?ll=30.324335%2C59.938452&mode=whatshere&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16.94" width="400" height="362" frameborder="none" allowfullscreen="true" style="position:relative;">
+          </iframe>
+        </div>
+
+        <noscript>
+          <picture>
+            <source width="1440" height="400" type="image/png" media="(min-width: 1200px)"
+              srcset="images/map-background-desktop@1x.png 1x, images/map-background-desktop@2x.png 2x">
+            <source width="768" height="400" type="image/png" media="(min-width: 768px)"
+              srcset="images/map-background-tablet@1x.png 1x, images/map-background-tablet@2x.png 2x">
+            <img class="location__image" src="images/map-background-mobile@1x.png" srcset="images/map-background-mobile@2x.png 2x" width="320"
+              height="362" alt="Карта">
+          </picture>
+        </noscript>
       </div>
     </section>
 

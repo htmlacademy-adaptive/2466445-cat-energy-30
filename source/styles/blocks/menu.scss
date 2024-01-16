@@ -40,15 +40,18 @@
   &--active {
     position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -10px;
-      left: 0;
-      height: 2px;
-      background: $main-color;
+    @media (min-width: $tablet) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background: $main-color;
+      }
     }
+
   }
 }
 
