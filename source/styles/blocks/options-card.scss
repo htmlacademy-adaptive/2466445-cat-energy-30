@@ -3,10 +3,24 @@
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet) {
     padding-left: 52px;
     padding-right: 52px;
+    margin-bottom: 30px;
+    padding-top: 77px;
+    padding-bottom: 53px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 61px;
+    margin-bottom: 71px;
+    padding-bottom: 55px;
+    flex-basis: 0;
+    flex-grow: 1;
   }
 }
 
@@ -22,6 +36,22 @@
     top: 21px;
     left: 20px;
     background-image: url("../../images/icons/stack.svg#cat-sits");
+
+    @media (min-width: $tablet) {
+      width: 200px;
+      height: 211px;
+      top: 81px;
+      right: 63px;
+      left: auto;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100px;
+      height: 106px;
+      top: 41px;
+      right: auto;
+      left: 52px;
+    }
   }
 }
 
@@ -37,6 +67,22 @@
     top: 24px;
     left: 13px;
     background-image: url("../../images/icons/stack.svg#cat-walks");
+
+    @media (min-width: $tablet) {
+      width: 268px;
+      height: 200px;
+      top: 91px;
+      right: 29px;
+      left: auto;
+    }
+
+    @media (min-width: $desktop) {
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      right: auto;
+      left: 33px;
+    }
   }
 }
 
@@ -47,18 +93,39 @@
   line-height: 37px;
   text-transform: uppercase;
   margin-left: 70px;
-  margin-top: 30px;
   margin-bottom: 29px;
+  white-space: nowrap;
 
   @media (min-width: $tablet) {
     margin-left: 0;
-    margin-top: 77px;
     margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
   }
 
   @media (min-width: $desktop) {
     margin-left: 162px;
     margin-bottom: 73px;
+  }
+}
+
+.options-card__content {
+  padding-bottom: 23px;
+  padding-right: 13px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    border-bottom: none;
+    margin-bottom: 25px;
+    width: 50%;
+    color: $black;
+  }
+
+  @media (min-width: $desktop) {
+    border-bottom: none;
+    margin-bottom: 0;
+    width: 100%;
   }
 }
 
@@ -68,9 +135,12 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  padding-top: 4px;
+  padding-bottom: 4px;
   display: flex;
   gap: 15px;
   align-items: center;
+  width: fit-content;
 
   &::after {
     content: "";
@@ -87,6 +157,11 @@
     &::after {
       width: 32px;
     }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: normal;
   }
 }
 

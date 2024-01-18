@@ -1,3 +1,11 @@
+.copyright {
+  padding-top: 20px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+  }
+}
+
 .copyright__logo {
   color: $main-text;
   font-family: $primary-font;
@@ -5,10 +13,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .copyright__link {
@@ -24,13 +28,29 @@
     flex-shrink: 0;
     mask-image: url("../../images/icons/stack.svg#html-academy");
     background-color: $main-text;
+  }
 
-    &:hover {
+  &:hover {
+    &::after {
       background-color: $main-color;
     }
+  }
 
-    &:active {
+  &:focus {
+    &::after {
       background-color: $main-color;
     }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      background-color: $main-color;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    gap: 23px;
   }
 }

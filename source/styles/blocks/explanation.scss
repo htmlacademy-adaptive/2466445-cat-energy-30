@@ -1,4 +1,5 @@
 .explanation {
+  @include padding-sides;
   padding-bottom: 49px;
 }
 

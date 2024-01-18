@@ -1,0 +1,10 @@
+.description-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}

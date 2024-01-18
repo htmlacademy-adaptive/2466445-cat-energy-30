@@ -10,7 +10,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  // max-width: 100%;
   height: auto;
   object-fit: contain;
 }
@@ -19,5 +19,17 @@ h1,
 h2,
 h3 {
   font-weight: inherit;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+dd {
+  margin: 0;
+}
+
+dl {
   margin: 0;
 }

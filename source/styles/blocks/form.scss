@@ -1,9 +1,61 @@
+.form {
+  @include padding-sides;
+  padding-bottom: 32px;
+
+  @media (min-width: $tablet) {
+    padding: 0 70px 60px;
+  }
+
+  @media (min-width: $desktop) {
+    @include padding-sides;
+    padding-bottom: 79px;
+  }
+}
+
+.form__section {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__section-wrapper {
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin-bottom: 70px;
+  }
+}
+
+.form__button-wrapper {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 45% 55%;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+}
+
 .form__button {
   width: 100%;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 14px 0;
+  }
 }
 
 .form__footnote {
+  padding-top: 21px;
   color: $black;
   text-align: center;
   line-height: 16px;
+
+  @media (min-width: $desktop) {
+    text-align: left;
+  }
 }

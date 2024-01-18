@@ -10,4 +10,12 @@
   line-height: 20px;
   text-transform: uppercase;
   border: none;
+
+  &:hover {
+    background-color: $main-color-active;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }

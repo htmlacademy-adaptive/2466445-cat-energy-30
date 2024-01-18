@@ -1,20 +1,76 @@
+.location {
+  @media (min-width: $desktop) {
+    position: relative;
+  }
+}
+
+.location__info {
+  @include padding-sides;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  @media (min-width: $tablet) {
+    padding-top: 61px;
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 60px 80px 60px 78px;
+    position: absolute;
+    z-index: 1;
+    background-color: $white;
+    top: 95px;
+    left: 110px;
+    gap: 87px;
+  }
+}
+
+.location__real-map {
+  width: 100%;
+  border: none;
+}
+
+.location__info--dark {
+  background: #f2f2f2;
+
+  @media (min-width: $desktop) {
+    background: $white;
+  }
+}
+
 .location__title {
   color: #111111;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .location__address {
   line-height: 20px;
 }
 
+.location__paragraph--one {
+  @media (min-width: $tablet) {
+    margin-bottom: 19px;
+  }
+}
+
 .location__map {
   position: relative;
+  height: 362px;
+  display: block;
 
   &::after {
     content: "";
-    display: block;
+    // display: block;
+    display: none;
     width: 57px;
     height: 53px;
     flex-shrink: 0;
@@ -22,10 +78,43 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     background-image:
       image-set(
         url("../../images/map-pin-mobile@1x.png") 1x,
         url("../../images/map-pin-mobile@2x.png") 2x);
     background-size: contain;
+
+    @media (min-width: $tablet) {
+      width: 113px;
+      height: 106px;
+    }
+
+    @media (min-width: $desktop) {
+      left: calc(50% + 237px);
+    }
+  }
+
+  @media (min-width: $tablet) {
+    height: 400px;
+  }
+}
+
+.location__map iframe {
+  height: 362px;
+
+  @media (min-width: $tablet) {
+    height: 400px;
+  }
+}
+
+.location__image {
+  display: block;
+  margin: 0 auto;
+  transform: translateY(-100%);
+  height: 362px;
+
+  @media (min-width: $tablet) {
+    height: 400px;
   }
 }

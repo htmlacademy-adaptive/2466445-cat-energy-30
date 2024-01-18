@@ -1,11 +1,69 @@
 .menu {
   @include list;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    gap: 33px;
+    align-items: center;
+  }
+}
+
+.menu__item {
+  border-top: 1px solid #e6e6e6;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    border: none;
+    height: auto;
+  }
 }
 
 .menu__link {
+  // height: 66px;
+  // padding-top: 22px;
   color: $black;
   font-family: $titles-font;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    position: relative;
+
+    @media (min-width: $tablet) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background: $main-color;
+      }
+    }
+  }
+}
+
+.menu__link--index {
+  @media (min-width: $desktop) {
+    color: $white;
+  }
+}
+
+.menu__link--index.menu__link--active {
+  @media (min-width: $desktop) {
+    &::after {
+      background: $white;
+    }
+  }
 }

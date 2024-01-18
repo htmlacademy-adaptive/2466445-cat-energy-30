@@ -1,11 +1,59 @@
 .example {
-  background-color: $main-bg;
+  background-color: #eaeaea;
+
+  @media (min-width: $tablet) {
+    background: linear-gradient(to top, $main-bg 462px, $white 462px);
+    border-top: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop) {
+    border: none;
+    background-color: $main-bg;
+  }
 }
 
+.example__wrapper {
+  @include padding-sides;
+  padding-top: 25px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet) {
+    padding-top: 45px;
+    padding-bottom: 101px;
+    gap: 104px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+    padding-bottom: 75px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.example__title {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 146px;
+  }
+}
 
 .example__description {
-  // color: $main-text;
-  // font-family: $primary-font;
-  // font-size: 14px;
-  // line-height: 18px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 69px;
+  }
 }
