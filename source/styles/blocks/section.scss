@@ -135,21 +135,21 @@
   text-transform: uppercase;
   background-color: $white;
 
-    &:hover {
-      outline: 1px solid #cdcdcd;
-    }
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
 
-    &:focus {
-      outline: 2px solid $main-text;
-    }
+  &:focus {
+    outline: 2px solid $main-text;
+  }
 
-    &--error {
-      outline: 2px solid #ff8282;
-    }
+  &--error {
+    outline: 2px solid #ff8282;
+  }
 
-    &--disabled {
-      opacity: 0.3;
-    }
+  &--disabled {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -261,22 +261,8 @@
     margin: auto 0;
     mask-image: url("../../images/icons/stack.svg#email");
     background-color: $second-text;
-
-    &--error {
-      background-color: #ff8282;
-    }
   }
 }
-
-//не работает
-.section__input-wrapper--mail .section__input {
-  &:focus {
-    .section__input-wrapper--mail::after {
-      background-color: $main-color;
-    }
-  }
-}
-
 
 .section__input-wrapper--tel {
   &::after {
@@ -293,16 +279,17 @@
     margin: auto 0;
     mask-image: url("../../images/icons/stack.svg#phone");
     background-color: $second-text;
-
-    &:focus {
-      background-color: $main-color;
-    }
-
-    &--error {
-      background-color: #ff8282;
-    }
   }
 }
+
+.section__input-wrapper:has(.section__input:focus)::after {
+  background-color: $main-color;
+}
+
+.section__input-wrapper:has(.section__input--error)::after {
+  background-color: #ff8282;
+}
+
 
 .section__title {
   @include long-line;

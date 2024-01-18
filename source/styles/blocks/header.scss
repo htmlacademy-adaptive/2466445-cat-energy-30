@@ -6,10 +6,10 @@
   align-items: center;
 
   @media (min-width: $tablet) {
+    @include padding-sides;
     display: flex;
     padding-top: 25px;
     border: none;
-    @include padding-sides;
   }
 }
 

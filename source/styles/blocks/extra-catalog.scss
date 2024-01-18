@@ -1,5 +1,6 @@
 .extra-catalog {
   @include padding-sides;
+
   @media (min-width: $desktop) {
     margin-bottom: 87px;
   }
@@ -18,7 +19,7 @@
 
   @media (min-width: $tablet) {
     border: 1px solid $border-extra;
-    padding: 0 38px;
+    // padding: 0 38px;
   }
 
   @media (min-width: $desktop) {

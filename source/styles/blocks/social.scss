@@ -12,34 +12,48 @@
 }
 
 .social__link {
-  display: block;
-  width: 28px;
-  height: 22px;
-  flex-shrink: 0;
-  background-color: #666666;
+  &::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    background-color: #666666;
+  }
 
   &--vk {
-    mask-image: url("../../images/icons/stack.svg#vkontakte");
+    &::after {
+      mask-image: url("../../images/icons/stack.svg#vkontakte");
+    }
   }
 
   &--youtube {
-    mask-image: url("../../images/icons/stack.svg#youtube");
+    &::after {
+      mask-image: url("../../images/icons/stack.svg#youtube");
+    }
   }
 
   &--telegram {
-    mask-image: url("../../images/icons/stack.svg#telegram");
+    &::after {
+      mask-image: url("../../images/icons/stack.svg#telegram");
+    }
   }
 
   &:hover {
-    background-color: $main-color;
+    &::after {
+      background-color: $main-color;
+    }
   }
 
   &:focus {
-    background-color: $main-color;
+    &::after {
+      background-color: $main-color;
+    }
   }
 
   &:active {
-    background-color: $main-color;
-    opacity: 0.3;
+    &::after {
+      background-color: $main-color;
+      opacity: 0.3;
+    }
   }
 }

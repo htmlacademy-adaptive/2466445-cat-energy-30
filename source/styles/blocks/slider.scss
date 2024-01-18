@@ -109,6 +109,8 @@
   width: 4px;
   height: 256px;
   border-radius: 2px;
+  border: 0;
+  padding: 0;
   background: #666666;
 
   @media (min-width: $tablet) {
@@ -142,8 +144,8 @@
     transform: translate(-50%, -50%);
   }
 
-    &:hover {
-      background: $main-color;
+  &:hover {
+    background: $main-color;
 
     &::before {
       border-color: $main-color;

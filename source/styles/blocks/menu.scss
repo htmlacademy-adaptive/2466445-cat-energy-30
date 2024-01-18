@@ -51,7 +51,6 @@
         background: $main-color;
       }
     }
-
   }
 }
 
@@ -63,7 +62,6 @@
 
 .menu__link--index.menu__link--active {
   @media (min-width: $desktop) {
-
     &::after {
       background: $white;
     }
