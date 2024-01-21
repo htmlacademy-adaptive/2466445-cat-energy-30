@@ -1,8 +1,10 @@
 .footer {
   background-color: $main-bg;
-  padding: 40px 20px;
+  height: 240px;
+  padding: 38px 20px 40px;
 
   @media (min-width: $tablet) {
+    height: 147px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,13 +12,14 @@
   }
 
   @media (min-width: $desktop) {
+    height: 169px;
     padding: 66px 110px;
   }
 }
 
 .footer__logo {
   padding-bottom: 20px;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid $border-extra3;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -29,7 +32,7 @@
 }
 
 .footer__social {
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid $border-extra3;
 
   @media (min-width: $tablet) {
     border: none;

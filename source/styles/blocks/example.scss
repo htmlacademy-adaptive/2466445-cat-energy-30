@@ -1,9 +1,9 @@
 .example {
-  background-color: #eaeaea;
+  background-color: $background;
 
   @media (min-width: $tablet) {
     background: linear-gradient(to top, $main-bg 462px, $white 462px);
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid $border-extra2;
   }
 
   @media (min-width: $desktop) {
@@ -14,7 +14,7 @@
 
 .example__wrapper {
   @include padding-sides;
-  padding-top: 25px;
+  padding-top: 28px;
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
 }
 
 .example__title {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 
   @media (min-width: $tablet) {
     margin-bottom: 60px;
@@ -55,5 +55,6 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 69px;
+    padding-right: 124px;
   }
 }

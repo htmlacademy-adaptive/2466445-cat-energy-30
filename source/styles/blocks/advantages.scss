@@ -8,8 +8,8 @@
 
   @media (min-width: $tablet) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 37px;
+    grid-template-columns: 51% 49%;
+    row-gap: 37px;
   }
 
   @media (min-width: $desktop) {
@@ -22,11 +22,10 @@
 .advantages__item {
   display: flex;
   gap: 20px;
+  align-items: center;
 
   @media (min-width: $tablet) {
-    flex-direction: column;
-    gap: 31px;
-    justify-content: center;
+    display: block;
     height: 280px;
     max-width: 250px;
     position: relative;
@@ -41,6 +40,8 @@
     flex-shrink: 0;
 
     @media (min-width: $tablet) {
+      margin-top: 40px;
+      margin-bottom: 31px;
       width: 80px;
       height: 80px;
     }
@@ -66,6 +67,11 @@
       z-index: -1;
     }
   }
+}
+
+// не работает
+.advantages__item::after(:first-of-type) {
+  right: 20px;
 }
 
 .advantages__item--leaf {

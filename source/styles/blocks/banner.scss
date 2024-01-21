@@ -57,6 +57,10 @@
     margin-bottom: 40px;
     text-align: left;
     margin-left: 90px;
+
+    @media (min-width: $desktop) {
+      margin-left: 80px;
+    }
   }
 }
 
@@ -83,10 +87,21 @@
 }
 
 .banner__image {
+  width: 280px;
+  height: 270px;
   display: block;
   margin: 0 auto;
+  margin-bottom: 3px;
+
+  @media (min-width: $tablet) {
+    width: 709px;
+    height: 609px;
+    margin-bottom: 0;
+  }
 
   @media (min-width: $desktop) {
+    width: 552px;
+    height: 499px;
     position: absolute;
     top: 143px;
     left: 39%;

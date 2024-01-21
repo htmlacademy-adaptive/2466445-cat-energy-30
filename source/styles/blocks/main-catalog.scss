@@ -11,5 +11,7 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 62px;
   }
 }

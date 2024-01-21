@@ -3,11 +3,11 @@
   padding-bottom: 32px;
 
   @media (min-width: $tablet) {
-    padding: 0 70px 60px;
+    padding: 0;
+    padding-bottom: 60px;
   }
 
   @media (min-width: $desktop) {
-    @include padding-sides;
     padding-bottom: 79px;
   }
 }
@@ -55,7 +55,14 @@
   text-align: center;
   line-height: 16px;
 
+  @media (min-width: $tablet) {
+    padding-top: 18px;
+    text-align: right;
+    padding-left: 60px;
+  }
+
   @media (min-width: $desktop) {
     text-align: left;
+    padding-left: 0;
   }
 }

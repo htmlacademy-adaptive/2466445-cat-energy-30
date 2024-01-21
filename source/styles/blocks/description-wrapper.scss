@@ -3,8 +3,11 @@
   justify-content: space-between;
 
   @media (min-width: $tablet) {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $border-extra;
+
+    &:not(:first-of-type) {
+      padding-top: 7px;
+    }
   }
 }

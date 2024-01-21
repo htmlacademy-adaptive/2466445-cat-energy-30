@@ -39,12 +39,17 @@
     content: "";
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     right: 0;
     width: 100vw;
     height: 2px;
     background: $main-color;
     box-shadow: 100vw 0 0 $main-color;
     z-index: -1;
+
+    @media (min-width: $desktop) {
+      transform: translateY(5px);
+    }
   }
 
   @media (min-width: $tablet) {

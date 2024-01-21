@@ -47,6 +47,7 @@
 
   @media (min-width: $desktop) {
     margin-left: 0;
+    padding-top: 76px;
   }
 }
 
@@ -59,7 +60,7 @@
 
   @media (min-width: $tablet) {
     height: 200px;
-    padding: 57px 77px 0 125px;
+    padding: 57px 125px 0 77px;
     margin-top: 70px;
     margin-bottom: 75px;
     background-position: center;
@@ -71,7 +72,7 @@
     padding: 0;
     margin: 0;
     flex-grow: 0;
-    padding-top: 56px;
+    padding-top: 58px;
   }
 }
 
