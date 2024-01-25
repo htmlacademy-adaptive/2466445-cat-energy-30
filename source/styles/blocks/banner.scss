@@ -22,28 +22,9 @@
   @media (min-width: $desktop) {
     margin-bottom: 82px;
     background: none;
-    position: static;
+    position: relative;
     padding-top: 110px;
     padding-bottom: 184px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: block;
-      width: 50%;
-      height: 694px;
-      z-index: -1;
-      background-color: #4e4d52;
-      background-image:
-        linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        image-set(
-          ("../../images/index-background-cat-desktop@1x.png") 1x,
-          ("../../images/index-background-cat-desktop@2x.png") 2x);
-      background-repeat: no-repeat;
-      background-position: left top;
-    }
   }
 }
 
@@ -60,6 +41,7 @@
 
     @media (min-width: $desktop) {
       margin-left: 80px;
+      max-width: 40%;
     }
   }
 }
@@ -83,6 +65,7 @@
   @media (min-width: $desktop) {
     margin-bottom: 52px;
     margin-left: 80px;
+    max-width: 40%;
   }
 }
 
@@ -103,7 +86,7 @@
     width: 552px;
     height: 499px;
     position: absolute;
-    top: 143px;
+    top: 29px;
     left: 39%;
   }
 }
@@ -126,5 +109,6 @@
     position: static;
     width: fit-content;
     margin-left: 80px;
+    max-width: 40%;
   }
 }

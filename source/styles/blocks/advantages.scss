@@ -26,7 +26,7 @@
 
   @media (min-width: $tablet) {
     display: block;
-    height: 280px;
+    min-height: 280px;
     max-width: 250px;
     position: relative;
   }
@@ -69,14 +69,19 @@
   }
 }
 
-// не работает
-.advantages__item::after(:first-of-type) {
-  right: 20px;
-}
-
 .advantages__item--leaf {
   &::before {
     background-image: url("../../images/icons/stack.svg#leaf");
+  }
+
+  &::after {
+      @media (min-width: $tablet) {
+      right: 24px;
+    }
+
+    @media (min-width: $desktop) {
+      right: 20px;
+    }
   }
 }
 
@@ -96,4 +101,18 @@
   &::before {
     background-image: url("../../images/icons/stack.svg#balance");
   }
+
+  &::after {
+    @media (min-width: $tablet) {
+    right: -6px;
+    }
+  }
+}
+
+.advantages__item--balance br {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    }
 }

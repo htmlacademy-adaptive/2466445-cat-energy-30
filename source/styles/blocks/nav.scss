@@ -3,5 +3,8 @@
 
   @media (min-width: $desktop) {
     background-color: transparent;
+      display: block;
+      margin-left: auto;
+      width: 50%;
   }
 }
