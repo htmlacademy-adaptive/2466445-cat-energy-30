@@ -133,7 +133,7 @@
 .section__input {
   flex-grow: 1;
   height: 45px;
-  padding: 14px 15px 13px 15px;
+  padding: 14px 15px 13px 14px;
   border: 1px solid $border-extra5;
   color: $main-text;
   font-family: $titles-font;
@@ -324,12 +324,6 @@
     margin-bottom: 76px;
   }
 }
-
-// .section__title--additional-info br {
-//   @media (min-width: $tablet) {
-//     display: none;
-//   }
-// }
 
 .section__title--comment {
   margin-top: 10px;

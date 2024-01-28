@@ -17,6 +17,7 @@
   "scripts": {
     "start": "gulp runDev",
     "build": "gulp buildProd",
+    "node-v": "node -v",
     "preview": "npm run build && browser-sync start -s build/ --cors --no-notify --no-ui",
     "prelint": "gulp processMarkup --silent",
     "lint": "npm-run-all -p lint:**",

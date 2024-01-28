@@ -10,4 +10,8 @@
       padding-top: 7px;
     }
   }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 5px;
+  }
 }

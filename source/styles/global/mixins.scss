@@ -47,7 +47,7 @@
     box-shadow: 100vw 0 0 $main-color;
     z-index: -1;
 
-    @media (min-width: $desktop) {
+    @media (min-width: $tablet) {
       transform: translateY(5px);
     }
   }
