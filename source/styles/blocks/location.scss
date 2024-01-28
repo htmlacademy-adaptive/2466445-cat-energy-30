@@ -36,6 +36,49 @@
 .location__map {
   grid-column: 1 / -1;
   grid-row: 1 / 4;
+  position: relative;
+  height: 362px;
+  display: block;
+
+  &::after {
+    content: "";
+    // display: block;
+    display: none;
+    width: 57px;
+    height: 53px;
+    flex-shrink: 0;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image:
+      image-set(
+        url("../../images/map-pin-mobile@1x.png") 1x,
+        url("../../images/map-pin-mobile@2x.png") 2x);
+    background-size: contain;
+
+    @media (min-width: $tablet) {
+      width: 113px;
+      height: 106px;
+    }
+
+    @media (min-width: $desktop) {
+      left: calc(50% + 237px);
+    }
+  }
+
+  @media (min-width: $tablet) {
+    height: 400px;
+  }
+}
+
+.location__map iframe {
+  height: 362px;
+
+  @media (min-width: $tablet) {
+    height: 400px;
+  }
 }
 
 .location__real-map {
@@ -84,52 +127,6 @@
 .location__paragraph--one {
   @media (min-width: $tablet) {
     margin-bottom: 19px;
-  }
-}
-
-.location__map {
-  position: relative;
-  height: 362px;
-  display: block;
-
-  &::after {
-    content: "";
-    // display: block;
-    display: none;
-    width: 57px;
-    height: 53px;
-    flex-shrink: 0;
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image:
-      image-set(
-        url("../../images/map-pin-mobile@1x.png") 1x,
-        url("../../images/map-pin-mobile@2x.png") 2x);
-    background-size: contain;
-
-    @media (min-width: $tablet) {
-      width: 113px;
-      height: 106px;
-    }
-
-    @media (min-width: $desktop) {
-      left: calc(50% + 237px);
-    }
-  }
-
-  @media (min-width: $tablet) {
-    height: 400px;
-  }
-}
-
-.location__map iframe {
-  height: 362px;
-
-  @media (min-width: $tablet) {
-    height: 400px;
   }
 }
 

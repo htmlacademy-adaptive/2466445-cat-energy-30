@@ -75,7 +75,7 @@
   }
 
   &::after {
-      @media (min-width: $tablet) {
+    @media (min-width: $tablet) {
       right: 24px;
     }
 
@@ -104,7 +104,7 @@
 
   &::after {
     @media (min-width: $tablet) {
-    right: -6px;
+      right: -6px;
     }
   }
 }
@@ -114,5 +114,5 @@
 
   @media (min-width: $tablet) {
     display: block;
-    }
+  }
 }
