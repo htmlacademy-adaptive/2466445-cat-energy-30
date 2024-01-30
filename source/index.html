@@ -10,20 +10,22 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="../../fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="../../fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
   <header class="header">
-    <a class="header__logo header__logo--icon logo" href="#">
+    <a class="header__logo header__logo--icon logo" href="index.html" aria-current="page">
       <picture class="logo__icon">
         <source media="(min-width: 1200px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
         <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
         <img src="images/logo-mobile.svg" width="33" height="38" alt="Товарный знак Cat Energy">
       </picture>
     </a>
-    <a class="header__logo header__logo--text logo" href="#">
-      <img class="logo__text" src="images/logo-text.svg" width="118" height="21" alt="Лого Cat Energy">
+    <a class="header__logo header__logo--text logo" href="index.html" aria-current="page">
+      <img class="logo__text logo__text--header" src="images/logo-text.svg" width="118" height="21" alt="Лого Cat Energy">
     </a>
     <button class="header__toggle header__toggle--nojs button-burger" type="button">
       <span class="visually-hidden">Открыть/закрыть меню</span>
@@ -45,10 +47,16 @@
 
   <main class="main-container">
 
-    <section class="banner">
+    <section class="main-container__banner banner">
       <h1 class="banner__title title">Функциональное<br>питание для котов</h1>
       <p class="banner__text">Занялся собой? Займись котом!</p>
       <picture>
+        <source width="552" height="499" type="image/webp" media="(min-width: 1200px)"
+          srcset="images/index-can-desktop@1x.webp 1x, images/index-can-desktop@2x.webp 2x">
+        <source width="709" height="609" type="image/webp" media="(min-width: 768px)"
+          srcset="images/index-can-tablet@1x.webp 1x, images/index-can-tablet@2x.webp 2x">
+          <source width="280" height="270" type="image/webp"
+          srcset="images/index-can-mobile@1x.webp 1x, images/index-can-mobile@2x.webp 2x">
         <source width="552" height="499" type="image/png" media="(min-width: 1200px)"
           srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
         <source width="709" height="609" type="image/png" media="(min-width: 768px)"
@@ -87,7 +95,7 @@
         <li class="advantages__item advantages__item--cutlery">Замените один-два приема обычной
           еды на наше функциональное питание.</li>
         <li class="advantages__item advantages__item--balance">Уже через месяц наслаждайтесь
-          изменениями к лучшему вашего питомца!</li>
+          изменениями к лучшему<br>вашего питомца!</li>
       </ol>
     </section>
 
@@ -121,6 +129,10 @@
           <div class="slider__images">
             <div class="slider__image-wrapper slider__image-wrapper--fat">
               <picture>
+                <source width="560" height="512" type="image/webp" media="(min-width: 768px)"
+                  srcset="images/cat-fat-tablet@1x.webp 1x, images/cat-fat-tablet@2x.webp 2x">
+                  <source width="280" height="256" type="image/webp"
+                  srcset="images/cat-fat-mobile@1x.webp 1x, images/cat-fat-mobile@2x.webp 2x">
                 <source width="560" height="512" type="image/png" media="(min-width: 768px)"
                   srcset="images/cat-fat-tablet@1x.png 1x, images/cat-fat-tablet@2x.png 2x">
                 <img class="slider__image" src="images/cat-fat-mobile@1x.png" srcset="images/cat-fat-mobile@2x.png 2x" width="280" height="256"
@@ -129,6 +141,10 @@
             </div>
             <div class="slider__image-wrapper slider__image-wrapper--slim">
               <picture>
+                <source width="560" height="512" type="image/webp" media="(min-width: 768px)"
+                  srcset="images/cat-slim-tablet@1x.webp 1x, images/cat-slim-tablet@2x.webp 2x">
+                  <source width="280" height="256" type="image/webp"
+                  srcset="images/cat-slim-mobile@1x.webp 1x, images/cat-slim-mobile@2x.webp 2x">
                 <source width="560" height="512" type="image/png" media="(min-width: 768px)"
                   srcset="images/cat-slim-tablet@1x.png 1x, images/cat-slim-tablet@2x.png 2x">
                 <img class="slider__image" src="images/cat-slim-mobile@1x.png" srcset="images/cat-slim-mobile@2x.png 2x" width="280" height="256"
@@ -158,6 +174,12 @@
         </iframe>
         <noscript>
           <picture>
+            <source width="1440" height="400" type="image/webp" media="(min-width: 1200px)"
+              srcset="images/map-background-desktop@1x.webp 1x, images/map-background-desktop@2x.webp 2x">
+            <source width="768" height="400" type="image/webp" media="(min-width: 768px)"
+              srcset="images/map-background-tablet@1x.webp 1x, images/map-background-tablet@2x.webp 2x">
+            <source width="320" height="362" type="image/webp"
+              srcset="images/map-background-mobile@1x.webp 1x, images/map-background-mobile@2x.webp 2x">
             <source width="1440" height="400" type="image/png" media="(min-width: 1200px)"
               srcset="images/map-background-desktop@1x.png 1x, images/map-background-desktop@2x.png 2x">
             <source width="768" height="400" type="image/png" media="(min-width: 768px)"
@@ -173,7 +195,7 @@
 
   <footer class="footer">
     <a class="footer__logo logo" href="index.html">
-      <img class="logo__text" src="images/logo-text.svg" width="128" height="24" alt="Лого Cat Energy">
+      <img class="logo__text logo__text--footer" src="images/logo-text.svg" width="128" height="24" alt="Лого Cat Energy">
     </a>
     <ul class="footer__social social">
       <li class="social__item">

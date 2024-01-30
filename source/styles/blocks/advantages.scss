@@ -3,13 +3,12 @@
   flex-direction: column;
   gap: 20px;
   padding: 0;
-  margin: 0;
   counter-reset: advantages-counter;
 
   @media (min-width: $tablet) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 37px;
+    grid-template-columns: 51% 49%;
+    row-gap: 37px;
   }
 
   @media (min-width: $desktop) {
@@ -22,12 +21,11 @@
 .advantages__item {
   display: flex;
   gap: 20px;
+  align-items: center;
 
   @media (min-width: $tablet) {
-    flex-direction: column;
-    gap: 31px;
-    justify-content: center;
-    height: 280px;
+    display: block;
+    min-height: 280px;
     max-width: 250px;
     position: relative;
   }
@@ -41,6 +39,8 @@
     flex-shrink: 0;
 
     @media (min-width: $tablet) {
+      margin-top: 40px;
+      margin-bottom: 31px;
       width: 80px;
       height: 80px;
     }
@@ -72,6 +72,16 @@
   &::before {
     background-image: url("../../images/icons/stack.svg#leaf");
   }
+
+  &::after {
+    @media (min-width: $tablet) {
+      right: 24px;
+    }
+
+    @media (min-width: $desktop) {
+      right: 20px;
+    }
+  }
 }
 
 .advantages__item--powder {
@@ -89,5 +99,19 @@
 .advantages__item--balance {
   &::before {
     background-image: url("../../images/icons/stack.svg#balance");
+  }
+
+  &::after {
+    @media (min-width: $tablet) {
+      right: -6px;
+    }
+  }
+}
+
+.advantages__item--balance br {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
   }
 }

@@ -4,6 +4,7 @@
   font-family: $titles-font;
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet) {
     font-size: 30px;
@@ -16,10 +17,10 @@
   font-size: 12px;
   line-height: 100%;
   width: 87px;
-  height: 16px;
+  min-height: 16px;
   padding: 0 6px;
   transform: translateY(8px);
-  background-color: #eaeaea;
+  background-color: $background;
 
   @media (min-width: $tablet) {
     font-size: 14px;
@@ -31,5 +32,6 @@
 
   @media (min-width: $desktop) {
     background-color: $main-bg;
+    transform: translateY(12px);
   }
 }

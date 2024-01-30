@@ -1,6 +1,8 @@
 .location {
   @media (min-width: $desktop) {
-    position: relative;
+    display: grid;
+    grid-template-columns: 110px 1fr 80px 1fr 110px;
+    grid-template-rows: 95px 1fr 106px;
   }
 }
 
@@ -12,64 +14,28 @@
   padding-bottom: 26px;
 
   @media (min-width: $tablet) {
-    padding-top: 61px;
-    padding-bottom: 61px;
+    padding: 61px 70px;
   }
 
   @media (min-width: $desktop) {
-    padding: 60px 80px 60px 78px;
-    position: absolute;
+    padding: 60px 78px 60px 80px;
     z-index: 1;
     background-color: $white;
-    top: 95px;
-    left: 110px;
-    gap: 87px;
-  }
-}
-
-.location__real-map {
-  width: 100%;
-  border: none;
-}
-
-.location__info--dark {
-  background: #f2f2f2;
-
-  @media (min-width: $desktop) {
-    background: $white;
-  }
-}
-
-.location__title {
-  color: #111111;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 26px;
-  }
-}
-
-.location__address {
-  line-height: 20px;
-}
-
-.location__paragraph--one {
-  @media (min-width: $tablet) {
-    margin-bottom: 19px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin-right: 4px;
   }
 }
 
 .location__map {
+  grid-column: 1 / -1;
+  grid-row: 1 / 4;
   position: relative;
   height: 362px;
   display: block;
 
   &::after {
     content: "";
-    // display: block;
     display: none;
     width: 57px;
     height: 53px;
@@ -105,6 +71,56 @@
 
   @media (min-width: $tablet) {
     height: 400px;
+  }
+}
+
+.location__real-map {
+  width: 100%;
+  border: none;
+}
+
+.location__info--dark {
+  background: $main-bg;
+
+  @media (min-width: $desktop) {
+    background: $white;
+  }
+}
+
+.location__title {
+  color: #111111;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding-right: 8px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 4px;
+  }
+}
+
+.location__address {
+  line-height: 20px;
+}
+
+.location__paragraph {
+  @media (min-width: $tablet) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.location__paragraph--one {
+  @media (min-width: $tablet) {
+    margin-bottom: 19px;
   }
 }
 

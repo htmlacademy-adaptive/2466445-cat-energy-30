@@ -1,11 +1,12 @@
 .extra-card {
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   border-bottom: 1px solid $border-extra;
+  gap: 8px;
 
   @media (min-width: $tablet) {
     border: none;
-    padding: 26px 38px 29px;
+    padding: 26px 38px 27px;
     border-bottom: 1px solid $border-extra;
   }
 
@@ -13,8 +14,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-
-    padding: 15px 0 17px;
+    padding: 15px 0 16px;
   }
 }
 
@@ -35,8 +35,9 @@
 .extra-card__link {
   display: block;
   width: fit-content;
+  padding-right: 8px;
 
-  &:hover {
+  &:hover:not(:disabled) {
     opacity: 0.8;
   }
 }
@@ -67,6 +68,7 @@
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
+  gap: 8px;
 
   @media (min-width: $tablet) {
     line-height: 20px;
@@ -86,5 +88,6 @@
 .extra-card__button {
   @media (min-width: $desktop) {
     width: 244px;
+    flex-shrink: 0;
   }
 }

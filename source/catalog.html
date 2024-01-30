@@ -10,20 +10,22 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="../../fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="../../fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
   <header class="header">
-    <a class="header__logo header__logo--icon logo" href="#">
+    <a class="header__logo header__logo--icon logo" href="index.html">
       <picture class="logo__icon">
         <source media="(min-width: 1200px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
         <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
         <img src="images/logo-mobile.svg" width="33" height="38" alt="Товарный знак Cat Energy">
       </picture>
     </a>
-    <a class="header__logo header__logo--text logo" href="#">
-      <img class="logo__text" src="images/logo-text.svg" width="118" height="21" alt="Лого Cat Energy">
+    <a class="header__logo header__logo--text logo" href="index.html">
+      <img class="logo__text logo__text--header" src="images/logo-text.svg" width="118" height="21" alt="Лого Cat Energy">
     </a>
     <button class="header__toggle header__toggle--nojs button-burger" type="button">
       <span class="visually-hidden">Открыть/закрыть меню</span>
@@ -46,17 +48,23 @@
   <main class="main-container main-container--catalog">
     <h1 class="main-container__title main-container__title--catalog title">Каталог продукции</h1>
 
-    <section class="main-catalog">
+    <section class="main-container__main-catalog main-catalog">
       <h2 class="visually-hidden">Основной каталог</h2>
       <ul class="main-catalog__list">
         <li class="main-catalog__product-card product-card">
           <div class="product-card__wrapper">
             <a class="product-card__link product-card__link--picture" href="#">
               <picture>
-                <source width="169" height="210" type="image/png" media="(min-width: 1440px)"
-                  srcset="images/catalog/catalog-1-desktop@1x.png, images/catalog/catalog-1-desktop@2x.png 2x">
+                <source width="169" height="210" type="image/webp" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-1-desktop@1x.webp 1x, images/catalog/catalog-1-desktop@2x.webp 2x">
+                <source width="200" height="210" type="image/webp" media="(min-width: 768px)"
+                  srcset="images/catalog/catalog-1-tablet@1x.webp 1x, images/catalog/catalog-1-tablet@2x.webp 2x">
+                <source width="140" height="107" type="image/webp"
+                  srcset="images/catalog/catalog-1-mobile@1x.webp 1x, images/catalog/catalog-1-mobile@2x.webp 2x">
+                <source width="169" height="210" type="image/png" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-1-desktop@1x.png 1x, images/catalog/catalog-1-desktop@2x.png 2x">
                 <source width="200" height="210" type="image/png" media="(min-width: 768px)"
-                  srcset="images/catalog/catalog-1-tablet@1x.png, images/catalog/catalog-1-tablet@2x.png 2x">
+                  srcset="images/catalog/catalog-1-tablet@1x.png 1x, images/catalog/catalog-1-tablet@2x.png 2x">
                 <img class="product-card__image" src="images/catalog/catalog-1-mobile@1x.png"
                   srcset="images/catalog/catalog-1-mobile@2x.png 2x" width="140" height="107" alt="Изображение Cat Energy PRO
                   500 курица">
@@ -88,10 +96,16 @@
           <div class="product-card__wrapper">
             <a class="product-card__link product-card__link--picture" href="#">
               <picture>
-                <source width="169" height="210" type="image/png" media="(min-width: 1440px)"
-                  srcset="images/catalog/catalog-2-desktop@1x.png, images/catalog/catalog-2-desktop@2x.png 2x">
+                <source width="169" height="210" type="image/webp" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-2-desktop@1x.webp 1x, images/catalog/catalog-2-desktop@2x.webp 2x">
+                <source width="200" height="210" type="image/webp" media="(min-width: 768px)"
+                  srcset="images/catalog/catalog-2-tablet@1x.webp 1x, images/catalog/catalog-2-tablet@2x.webp 2x">
+                <source width="140" height="107" type="image/webp"
+                  srcset="images/catalog/catalog-2-mobile@1x.webp 1x, images/catalog/catalog-2-mobile@2x.webp 2x">
+                <source width="169" height="210" type="image/png" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-2-desktop@1x.png 1x, images/catalog/catalog-2-desktop@2x.png 2x">
                 <source width="200" height="210" type="image/png" media="(min-width: 768px)"
-                  srcset="images/catalog/catalog-2-tablet@1x.png, images/catalog/catalog-2-tablet@2x.png 2x">
+                  srcset="images/catalog/catalog-2-tablet@1x.png 1x, images/catalog/catalog-2-tablet@2x.png 2x">
                 <img class="product-card__image" src="images/catalog/catalog-2-mobile@1x.png"
                   srcset="images/catalog/catalog-2-mobile@2x.png 2x" width="140" height="107" alt="Изображение Cat Energy PRO
                   1000 курица">
@@ -112,7 +126,7 @@
                 </div>
                 <div class="description-wrapper">
                   <dt>Цена</dt>
-                  <dd>700 <span>&#8381;</span></dd>
+                  <dd>1000 <span>&#8381;</span></dd>
                 </div>
               </dl>
             </div>
@@ -123,10 +137,16 @@
           <div class="product-card__wrapper">
             <a class="product-card__link product-card__link--picture" href="#">
               <picture>
-                <source width="169" height="210" type="image/png" media="(min-width: 1440px)"
-                  srcset="images/catalog/catalog-3-desktop@1x.png, images/catalog/catalog-3-desktop@2x.png 2x">
+                <source width="169" height="210" type="image/webp" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-3-desktop@1x.webp 1x, images/catalog/catalog-3-desktop@2x.webp 2x">
+                <source width="200" height="210" type="image/webp" media="(min-width: 768px)"
+                  srcset="images/catalog/catalog-3-tablet@1x.webp 1x, images/catalog/catalog-3-tablet@2x.webp 2x">
+                <source width="140" height="107" type="image/webp"
+                  srcset="images/catalog/catalog-3-mobile@1x.webp 1x, images/catalog/catalog-3-mobile@2x.webp 2x">
+                <source width="169" height="210" type="image/png" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-3-desktop@1x.png 1x, images/catalog/catalog-3-desktop@2x.png 2x">
                 <source width="200" height="210" type="image/png" media="(min-width: 768px)"
-                  srcset="images/catalog/catalog-3-tablet@1x.png, images/catalog/catalog-3-tablet@2x.png 2x">
+                  srcset="images/catalog/catalog-3-tablet@1x.png 1x, images/catalog/catalog-3-tablet@2x.png 2x">
                 <img class="product-card__image" src="images/catalog/catalog-3-mobile@1x.png"
                   srcset="images/catalog/catalog-3-mobile@2x.png 2x" width="140" height="107" alt="Изображение Cat Energy PRO
                   500 рыба">
@@ -156,12 +176,18 @@
         </li>
         <li class="main-catalog__product-card product-card">
           <div class="product-card__wrapper">
-            <a class="product-card__link product-card__link--picture"" href="#">
+            <a class="product-card__link product-card__link--picture" href="#">
               <picture>
-                <source width="169" height="210" type="image/png" media="(min-width: 1440px)"
-                  srcset="images/catalog/catalog-4-desktop@1x.png, images/catalog/catalog-4-desktop@2x.png 2x">
+                <source width="169" height="210" type="image/webp" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-4-desktop@1x.webp 1x, images/catalog/catalog-4-desktop@2x.webp 2x">
+                <source width="200" height="210" type="image/webp" media="(min-width: 768px)"
+                  srcset="images/catalog/catalog-4-tablet@1x.webp 1x, images/catalog/catalog-4-tablet@2x.webp 2x">
+                <source width="140" height="107" type="image/webp"
+                  srcset="images/catalog/catalog-4-mobile@1x.webp 1x, images/catalog/catalog-4-mobile@2x.webp 2x">
+                <source width="169" height="210" type="image/png" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-4-desktop@1x.png 1x, images/catalog/catalog-4-desktop@2x.png 2x">
                 <source width="200" height="210" type="image/png" media="(min-width: 768px)"
-                  srcset="images/catalog/catalog-4-tablet@1x.png, images/catalog/catalog-4-tablet@2x.png 2x">
+                  srcset="images/catalog/catalog-4-tablet@1x.png 1x, images/catalog/catalog-4-tablet@2x.png 2x">
                 <img class="product-card__image" src="images/catalog/catalog-4-mobile@1x.png"
                   srcset="images/catalog/catalog-4-mobile@2x.png 2x" width="140" height="107" alt="Изображение Cat Energy PRO
                   1000 рыба">
@@ -182,7 +208,7 @@
                 </div>
                 <div class="description-wrapper">
                   <dt>Цена</dt>
-                  <dd>700 <span>&#8381;</span></dd>
+                  <dd>1000 <span>&#8381;</span></dd>
                 </div>
               </dl>
             </div>
@@ -191,12 +217,18 @@
         </li>
         <li class="main-catalog__product-card product-card">
           <div class="product-card__wrapper">
-            <a class="product-card__link product-card__link--picture"" href="#">
+            <a class="product-card__link product-card__link--picture" href="#">
               <picture>
-                <source width="169" height="210" type="image/png" media="(min-width: 1440px)"
-                  srcset="images/catalog/catalog-5-desktop@1x.png, images/catalog/catalog-5-desktop@2x.png 2x">
+                <source width="169" height="210" type="image/webp" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-5-desktop@1x.webp 1x, images/catalog/catalog-5-desktop@2x.webp 2x">
+                <source width="200" height="210" type="image/webp" media="(min-width: 768px)"
+                  srcset="images/catalog/catalog-5-tablet@1x.webp 1x, images/catalog/catalog-5-tablet@2x.webp 2x">
+                <source width="140" height="107" type="image/webp"
+                  srcset="images/catalog/catalog-5-mobile@1x.webp 1x, images/catalog/catalog-5-mobile@2x.webp 2x">
+                <source width="169" height="210" type="image/png" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-5-desktop@1x.png 1x, images/catalog/catalog-5-desktop@2x.png 2x">
                 <source width="200" height="210" type="image/png" media="(min-width: 768px)"
-                  srcset="images/catalog/catalog-5-tablet@1x.png, images/catalog/catalog-5-tablet@2x.png 2x">
+                  srcset="images/catalog/catalog-5-tablet@1x.png 1x, images/catalog/catalog-5-tablet@2x.png 2x">
                 <img class="product-card__image" src="images/catalog/catalog-5-mobile@1x.png"
                   srcset="images/catalog/catalog-5-mobile@2x.png 2x" width="140" height="107" alt="Изображение Cat Energy PRO
                   500 гречка">
@@ -204,7 +236,7 @@
             </a>
             <div class="product-card__content">
               <a class="product-card__link product-card__link--text" href="#">
-                <h3 class="product-card__title">Cat energy pro 500 г</h3>
+                <h3 class="product-card__title">Cat energy slim 500 г</h3>
               </a>
               <dl class="product-card__description">
                 <div class="description-wrapper">
@@ -226,12 +258,18 @@
         </li>
         <li class="main-catalog__product-card product-card">
           <div class="product-card__wrapper">
-            <a class="product-card__link product-card__link--picture"" href="#">
+            <a class="product-card__link product-card__link--picture" href="#">
               <picture>
-                <source width="169" height="210" type="image/png" media="(min-width: 1440px)"
-                  srcset="images/catalog/catalog-6-desktop@1x.png, images/catalog/catalog-6-desktop@2x.png 2x">
+                <source width="169" height="210" type="image/webp" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-6-desktop@1x.webp 1x, images/catalog/catalog-6-desktop@2x.webp 2x">
+                <source width="200" height="210" type="image/webp" media="(min-width: 768px)"
+                  srcset="images/catalog/catalog-6-tablet@1x.webp 1x, images/catalog/catalog-6-tablet@2x.webp 2x">
+                <source width="140" height="107" type="image/webp"
+                  srcset="images/catalog/catalog-6-mobile@1x.webp 1x, images/catalog/catalog-6-mobile@2x.webp 2x">
+                <source width="169" height="210" type="image/png" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-6-desktop@1x.png 1x, images/catalog/catalog-6-desktop@2x.png 2x">
                 <source width="200" height="210" type="image/png" media="(min-width: 768px)"
-                  srcset="images/catalog/catalog-6-tablet@1x.png, images/catalog/catalog-6-tablet@2x.png 2x">
+                  srcset="images/catalog/catalog-6-tablet@1x.png 1x, images/catalog/catalog-6-tablet@2x.png 2x">
                 <img class="product-card__image" src="images/catalog/catalog-6-mobile@1x.png"
                   srcset="images/catalog/catalog-6-mobile@2x.png 2x" width="140" height="107" alt="Изображение Cat Energy PRO
                   1000 гречка">
@@ -239,7 +277,7 @@
             </a>
             <div class="product-card__content">
               <a class="product-card__link product-card__link--text" href="#">
-                <h3 class="product-card__title">Cat energy pro 1000 г</h3>
+                <h3 class="product-card__title">Cat energy slim 1000 г</h3>
               </a>
               <dl class="product-card__description">
                 <div class="description-wrapper">
@@ -252,7 +290,7 @@
                 </div>
                 <div class="description-wrapper">
                   <dt>Цена</dt>
-                  <dd>700 <span>&#8381;</span></dd>
+                  <dd>1000 <span>&#8381;</span></dd>
                 </div>
               </dl>
             </div>
@@ -263,10 +301,16 @@
           <div class="product-card__wrapper">
             <a class="product-card__link product-card__link--picture" href="#">
               <picture>
-                <source width="169" height="210" type="image/png" media="(min-width: 1440px)"
-                  srcset="images/catalog/catalog-7-desktop@1x.png, images/catalog/catalog-7-desktop@2x.png 2x">
+                <source width="169" height="210" type="image/webp" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-7-desktop@1x.webp 1x, images/catalog/catalog-7-desktop@2x.webp 2x">
+                <source width="200" height="210" type="image/webp" media="(min-width: 768px)"
+                  srcset="images/catalog/catalog-7-tablet@1x.webp 1x, images/catalog/catalog-7-tablet@2x.webp 2x">
+                <source width="140" height="107" type="image/webp"
+                  srcset="images/catalog/catalog-7-mobile@1x.webp 1x, images/catalog/catalog-7-mobile@2x.webp 2x">
+                <source width="169" height="210" type="image/png" media="(min-width: 1200px)"
+                  srcset="images/catalog/catalog-7-desktop@1x.png 1x, images/catalog/catalog-7-desktop@2x.png 2x">
                 <source width="200" height="210" type="image/png" media="(min-width: 768px)"
-                  srcset="images/catalog/catalog-7-tablet@1x.png, images/catalog/catalog-7-tablet@2x.png 2x">
+                  srcset="images/catalog/catalog-7-tablet@1x.png 1x, images/catalog/catalog-7-tablet@2x.png 2x">
                 <img class="product-card__image" src="images/catalog/catalog-7-mobile@1x.png"
                   srcset="images/catalog/catalog-7-mobile@2x.png 2x" width="140" height="107" alt="Изображение Cat Energy PRO
                   500 рис">
@@ -274,7 +318,7 @@
             </a>
             <div class="product-card__content">
               <a class="product-card__link product-card__link--text" href="#">
-                <h3 class="product-card__title">Cat energy pro 500 г</h3>
+                <h3 class="product-card__title">Cat energy slim 500 г</h3>
               </a>
               <dl class="product-card__description">
                 <div class="description-wrapper">
@@ -309,7 +353,7 @@
       </ul>
     </section>
 
-    <section class="extra-catalog">
+    <section class="main-container__extra-catalog extra-catalog">
       <h2 class="extra-catalog__title title">Дополнительные товары</h2>
       <div class="extra-catalog__content">
         <ul class="extra-catalog__list">
@@ -383,7 +427,13 @@
         </iframe>
         <noscript>
           <picture>
-            <source width="1440" height="400" type="image/png" media="(min-width: 1200px)"
+            <source width="1200" height="400" type="image/webp" media="(min-width: 1200px)"
+              srcset="images/map-background-desktop@1x.webp 1x, images/map-background-desktop@2x.webp 2x">
+            <source width="768" height="400" type="image/webp" media="(min-width: 768px)"
+              srcset="images/map-background-tablet@1x.webp 1x, images/map-background-tablet@2x.webp 2x">
+            <source width="320" height="362" type="image/webp"
+              srcset="images/map-background-mobile@1x.webp 1x, images/map-background-mobile@2x.webp 2x">
+            <source width="1200" height="400" type="image/png" media="(min-width: 1200px)"
               srcset="images/map-background-desktop@1x.png 1x, images/map-background-desktop@2x.png 2x">
             <source width="768" height="400" type="image/png" media="(min-width: 768px)"
               srcset="images/map-background-tablet@1x.png 1x, images/map-background-tablet@2x.png 2x">
@@ -398,7 +448,7 @@
 
   <footer class="footer">
     <a class="footer__logo logo" href="index.html">
-      <img class="logo__text" src="images/logo-text.svg" width="128" height="24" alt="Лого Cat Energy">
+      <img class="logo__text logo__text--footer" src="images/logo-text.svg" width="128" height="24" alt="Лого Cat Energy">
     </a>
     <ul class="footer__social social">
       <li class="social__item">

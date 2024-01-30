@@ -8,6 +8,7 @@
 
   @media (min-width: $tablet) {
     padding: 0;
+    padding-left: 36px;
   }
 }
 
@@ -17,7 +18,7 @@
     display: block;
     width: 28px;
     height: 22px;
-    background-color: #666666;
+    background-color: $background2;
   }
 
   &--vk {
@@ -38,19 +39,19 @@
     }
   }
 
-  &:hover {
+  &:hover:not(.disabled) {
     &::after {
       background-color: $main-color;
     }
   }
 
-  &:focus {
+  &:focus:not(.disabled) {
     &::after {
       background-color: $main-color;
     }
   }
 
-  &:active {
+  &:active:not(.disabled) {
     &::after {
       background-color: $main-color;
       opacity: 0.3;

@@ -1,10 +1,18 @@
 .description-wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 8px;
 
   @media (min-width: $tablet) {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $border-extra;
+
+    &:not(:first-of-type) {
+      padding-top: 7px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 5px;
   }
 }
