@@ -1,13 +1,13 @@
 .logo {
-  &:hover {
+  &:hover:not([aria-current]) {
     opacity: 0.8;
   }
 
-  &:focus {
+  &:focus:not([aria-current]) {
     opacity: 0.8;
   }
 
-  &:active {
+  &:active:not([aria-current]) {
     opacity: 0.6;
   }
 }

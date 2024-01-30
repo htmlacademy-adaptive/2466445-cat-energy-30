@@ -39,19 +39,19 @@
     }
   }
 
-  &:hover {
+  &:hover:not(.disabled) {
     &::after {
       background-color: $main-color;
     }
   }
 
-  &:focus {
+  &:focus:not(.disabled) {
     &::after {
       background-color: $main-color;
     }
   }
 
-  &:active {
+  &:active:not(.disabled) {
     &::after {
       background-color: $main-color;
       opacity: 0.3;

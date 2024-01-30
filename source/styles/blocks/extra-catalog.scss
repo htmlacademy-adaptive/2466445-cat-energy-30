@@ -1,9 +1,5 @@
 .extra-catalog {
   @include padding-sides;
-
-  @media (min-width: $desktop) {
-    margin-bottom: 87px;
-  }
 }
 
 .extra-catalog__content {
@@ -19,7 +15,6 @@
 
   @media (min-width: $tablet) {
     border: 1px solid $border-extra;
-    // padding: 0 38px;
   }
 
   @media (min-width: $desktop) {
@@ -56,6 +51,7 @@
   background-size: cover;
   margin: 35px auto;
   padding: 59px 58px 43px 61px;
+  flex-shrink: 0;
 
   @media (min-width: $tablet) {
     padding: 57px 125px 60px 77px;
@@ -66,7 +62,7 @@
 
   @media (min-width: $desktop) {
     width: 245px;
-    padding: 0;
+    padding: 0 10px;
     margin: 0;
     flex-grow: 0;
     padding-top: 58px;

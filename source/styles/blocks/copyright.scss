@@ -30,7 +30,7 @@
     background-color: $main-text;
   }
 
-  &:hover {
+  &:hover:not(.disabled) {
     &::after {
       background-color: $main-color;
     }
@@ -42,7 +42,7 @@
     }
   }
 
-  &:active {
+  &:active:not(.disabled) {
     opacity: 0.3;
 
     &::after {

@@ -8,7 +8,7 @@
 
   @media (min-width: $desktop) {
     border: none;
-    background-color: $main-bg;
+    background: linear-gradient(to bottom, $white 135px, $main-bg 135px);
   }
 }
 

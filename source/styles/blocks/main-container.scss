@@ -1,3 +1,15 @@
+.main-container__banner {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 82px;
+  }
+}
+
 .main-container__title {
   padding-top: 27px;
   padding-bottom: 41px;
@@ -55,5 +67,11 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 67px;
+  }
+}
+
+.main-container__extra-catalog {
+  @media (min-width: $desktop) {
+    margin-bottom: 87px;
   }
 }

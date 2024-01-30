@@ -24,7 +24,6 @@
   position: relative;
   padding-top: 22px;
   padding-bottom: 19px;
-  margin-bottom: 26px;
 
   &::before {
     content: "";
@@ -59,25 +58,11 @@
   @media (min-width: $tablet) {
     padding: 23px 27px 27px;
     border: 1px solid $border-extra5;
-    margin-bottom: 65px;
     gap: 12px;
   }
 
   @media (min-width: $desktop) {
     gap: 13px;
-    margin-bottom: 0;
-  }
-}
-
-.section--additional-info {
-  margin-bottom: 23px;
-
-  @media (min-width: $tablet) {
-    margin-bottom: 65px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-bottom: 73px;
   }
 }
 
@@ -118,7 +103,6 @@
   display: flex;
   gap: 13px;
   align-items: center;
-  // white-space: nowrap;
 
   &--disabled {
     opacity: 0.3;
@@ -142,11 +126,11 @@
   text-transform: uppercase;
   background-color: $white;
 
-  &:hover {
+  &:hover:not(:disabled) {
     outline: 1px solid $border-extra;
   }
 
-  &:focus {
+  &:focus:not(:disabled) {
     outline: 2px solid $main-text;
   }
 
@@ -168,9 +152,15 @@
 
 .section__input--textarea {
   min-height: 150px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet) {
     min-height: 175px;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 73px;
   }
 }
 
@@ -300,6 +290,17 @@
   background-color: #ff8282;
 }
 
+.section__input-wrapper .section__input {
+  padding-right: 32px;
+
+  @media (min-width: $tablet) {
+    right: 34px;
+  }
+
+  @media (min-width: $desktop) {
+    right: 36px;
+  }
+}
 
 .section__title {
   @include long-line;

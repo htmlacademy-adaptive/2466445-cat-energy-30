@@ -11,7 +11,7 @@
   }
 }
 
-.page__body :has(.banner) {
+.page__body:has(.banner) {
   @media (min-width: $desktop) {
     &::after {
       content: "";

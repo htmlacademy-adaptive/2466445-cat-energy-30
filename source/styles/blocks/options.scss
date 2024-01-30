@@ -12,3 +12,15 @@
     flex-wrap: wrap;
   }
 }
+
+.options__item {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 71px;
+  }
+}
