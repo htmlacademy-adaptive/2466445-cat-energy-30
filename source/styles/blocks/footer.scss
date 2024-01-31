@@ -1,16 +1,22 @@
 .footer {
   background-color: $main-bg;
-  padding: 38px 20px 40px;
+  padding: 38px 20px 0;
 
   @media (min-width: $tablet) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 57px 30px;
+    padding: 57px 0;
   }
 
   @media (min-width: $desktop) {
-    padding: 66px 110px;
+    padding: 66px 0;
+  }
+}
+
+.footer__content {
+  @media (min-width: $tablet) {
+    @include padding-sides;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
