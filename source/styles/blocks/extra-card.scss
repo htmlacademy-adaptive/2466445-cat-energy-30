@@ -89,5 +89,6 @@
   @media (min-width: $desktop) {
     width: 244px;
     flex-shrink: 0;
+    align-self: flex-start;
   }
 }
